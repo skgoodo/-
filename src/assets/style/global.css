@@ -1,0 +1,15 @@
+body,
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#app,
+div,
+.el-container{
+    height: 100%;
+}
+div{
+    margin: 0;
+    padding: 0;
+}
