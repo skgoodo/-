@@ -33,7 +33,7 @@ export default {
   background-color: #fff;
   color: #333;
   line-height: 65px;
-  height: 65px;
+  height: 65px !important;
 }
 
 .el-aside {

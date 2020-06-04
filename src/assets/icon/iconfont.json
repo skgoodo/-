@@ -1,10 +1,17 @@
 {
   "id": "1863711",
   "name": "icon",
-  "font_family": "iconfont-ali",
-  "css_prefix_text": "icon-ali",
+  "font_family": "fontFamily",
+  "css_prefix_text": "el-icon-ump",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "14151854",
+      "name": "全屏",
+      "font_class": "quanping",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
     {
       "icon_id": "2963755",
       "name": "互动",

@@ -1,12 +1,12 @@
 <template>
     <div class="aside-l">
         <div class="logo">
-            <img class="logo-img1" src="../../../assets/images/logo.jpg" alt="" v-show="!isCollapse">
-            <img class="logo-img2" src="../../../assets/images/logo-2.jpg" alt="" v-show="isCollapse">
+            <img class="logo-img1" src="../../../assets/images/logo.jpg" alt="" v-show="!$store.state.isCollapse">
+            <img class="logo-img2" src="../../../assets/images/logo-2.jpg" alt="" v-show="$store.state.isCollapse">
             <span></span>
         </div>
-        <el-menu default-active="1-4-1" class="el-menu-vertical-demo" background-color="#515a6e"
-            active-text-color="#fff" text-color="hsla(0,0%,100%,.7)" :collapse="isCollapse">
+        <el-menu default-active="1-4-1" class="el-menu-vertical-demo" background-color="#00152A"
+            active-text-color="#fff" text-color="hsla(0,0%,100%,.7)" :collapse="$store.state.isCollapse">
             <el-menu-item index="1">
                 <i class="el-icon-reading"></i>
                 <span slot="title">文档</span>
@@ -139,7 +139,7 @@
     export default {
         data() {
             return {
-                isCollapse: this.$store.state.isCollapse
+                // isCollapse: this.$store.state.isCollapse
             }
         }
     }
