@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="home">
     <el-container>
-      <el-aside width="200px">
+      <el-aside width="">
         <Aside></Aside>
       </el-aside>
       <el-container>
@@ -30,17 +30,16 @@ export default {
 </script>
 <style>
 .el-header {
-  background-color: #b3c0d1;
+  background-color: #fff;
   color: #333;
-  text-align: center;
-  line-height: 60px;
+  line-height: 65px;
+  height: 65px;
 }
 
 .el-aside {
   background-color: #d3dce6;
   color: #333;
   text-align: center;
-  line-height: 200px;
 }
 
 .el-main {
@@ -61,5 +60,8 @@ body > .el-container {
 
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
+}
+element.style{
+  height: 50px;
 }
 </style>
