@@ -4,13 +4,19 @@ Vue.use(Router);
 export default new Router({
   mode:"history",
   routes: [
-    {
-      path:"/",
-      redirect: "/home"
-    },
+    // {
+    //   path:"/",
+    //   redirect: "/home"
+    // },
     {
       path: "/home",
-      component: ()=>import("@/components/body/pages/Index.vue")
+      component: ()=>import("@/components/body/pages/Index.vue"),
+      children:[
+        {
+          path:"/",
+          component:()=>import("@/components/body/pages/Main.vue")
+        }
+      ]
     }
   ]
 });

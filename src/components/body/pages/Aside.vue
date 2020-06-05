@@ -6,123 +6,123 @@
             <span></span>
         </div>
         <el-menu default-active="1-4-1" class="el-menu-vertical-demo" background-color="#00152A"
-            active-text-color="#fff" text-color="hsla(0,0%,100%,.7)" :collapse="$store.state.isCollapse">
+            active-text-color="#fff" text-color="hsla(0,0%,100%,.7)" :collapse="$store.state.isCollapse" >
             <el-menu-item index="1">
                 <i class="el-icon-reading"></i>
-                <span slot="title">文档</span>
+                <span slot="title">{{$t('message.document')}}</span>
             </el-menu-item>
             <el-menu-item index="2">
                 <i class="el-icon-setting"></i>
-                <span slot="title">QQ群</span>
+                <span slot="title">{{$t('message.group')}}</span>
             </el-menu-item>
             <el-submenu index="1">
                 <template slot="title">
                     <i class="el-icon-location"></i>
-                    <span slot="title">组件</span>
+                    <span slot="title">{{$t('message.components')}}</span>
                 </template>
                 <el-menu-item-group>
                     <el-menu-item index="1-1">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">树状下拉选择器</span>
+                        <span slot="title">{{$t('message.treeselector')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">数字渐变</span>
+                        <span slot="title">{{$t('message.countto')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">拖拽列表</span>
+                        <span slot="title">{{$t('message.draglist')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">可抽动抽屉</span>
+                        <span slot="title">{{$t('message.draggabledrawer')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">组织结构树</span>
+                        <span slot="title">{{$t('message.orgtree')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">树状表格</span>
+                        <span slot="title">{{$t('message.treetable')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">图片裁剪</span>
+                        <span slot="title">{{$t('message.cropper')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">多功能表格</span>
+                        <span slot="title">{{$t('message.table')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">分割窗口</span>
+                        <span slot="title">{{$t('message.splitpane')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">Markdown编辑器</span>
+                        <span slot="title">{{$t('message.markdowneditor')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">富文本编辑器</span>
+                        <span slot="title">{{$t('message.richtexteditor')}}</span>
                     </el-menu-item>
                     <el-menu-item index="1-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">自定义图标</span>
+                        <span slot="title">{{$t('message.customicon')}}</span>
                     </el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
             <el-submenu index="2">
                 <template slot="title">
                     <i class="el-icon-location"></i>
-                    <span slot="title">上传数据</span>
+                    <span slot="title">{{$t('message.update')}}</span>
                 </template>
                 <el-menu-item-group>
                     <el-menu-item index="2-1">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">上传CSV文件</span>
+                        <span slot="title">{{$t('message.updatecsv')}}</span>
                     </el-menu-item>
                     <el-menu-item index="2-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">粘贴表格数据</span>
+                        <span slot="title">{{$t('message.pastetabledata')}}</span>
                     </el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
             <el-submenu index="3">
                 <template slot="title">
                     <i class="el-icon-location"></i>
-                    <span slot="title">Excel</span>
+                    <span slot="title">{{$t('message.excel')}}</span>
                 </template>
                 <el-menu-item-group>
                     <el-menu-item index="3-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">上传excel</span>
+                        <span slot="title">{{$t('message.uploadexcel')}}</span>
                     </el-menu-item>
                     <el-menu-item index="3-2">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">导出excel</span>
+                        <span slot="title">{{$t('message.exportexcel')}}</span>
                     </el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
             <el-menu-item index="1">
                 <i class="el-icon-reading"></i>
-                <span slot="title">工具函数</span>
+                <span slot="title">{{$t('message.toolsmethods')}}</span>
             </el-menu-item>
             <el-menu-item index="1">
                 <i class="el-icon-reading"></i>
-                <span slot="title">i18n-多语言</span>
+                <span slot="title">{{$t('message.internationalization')}}</span>
             </el-menu-item>
             <el-menu-item index="1">
                 <i class="el-icon-reading"></i>
-                <span slot="title">错误收集</span>
+                <span slot="title">{{$t('message.errorcollection')}}</span>
             </el-menu-item>
             <el-menu-item index="2">
                 <i class="el-icon-reading"></i>
-                <span slot="title">指令</span>
+                <span slot="title">{{$t('message.dirctive')}}</span>
             </el-menu-item>
             <el-submenu index="4">
                 <template slot="title">
                     <i class="el-icon-location"></i>
-                    <span slot="title">导航一</span>
+                    <span slot="title">{{$t('message.multilevel')}}</span>
                 </template>
                     <el-menu-item index="4-1">Level-2-1</el-menu-item>  
                 <el-submenu index="4-4">
@@ -139,14 +139,13 @@
     export default {
         data() {
             return {
-                // isCollapse: this.$store.state.isCollapse
             }
         }
     }
 </script>
 <style>
     .el-menu-vertical-demo:not(.el-menu--collapse) {
-        width: 260px;
+        width: 275px;
         min-height: 400px;
         background-color: rgb(0, 21, 41);
 
