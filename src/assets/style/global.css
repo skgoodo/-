@@ -9,7 +9,7 @@ html{
 .el-container{
     height: 100%;
 }
-div{
+div,p{
     margin: 0;
     padding: 0;
 }

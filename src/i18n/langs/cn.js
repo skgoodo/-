@@ -2,7 +2,7 @@ import zhLocale from "element-ui/lib/locale/lang/zh-CN";
 const cn = {
   message: {
     document: "文档",
-    group: "QQ 群",
+    group: "QQ群",
     components: "组件",
     treeselector: "树状下拉选择器",
     countto:"数字渐变",

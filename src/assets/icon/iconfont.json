@@ -6,6 +6,125 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "169915",
+      "name": "粘贴",
+      "font_class": "zhantie",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "1685042",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "3367590",
+      "name": "抽屉",
+      "font_class": "chouti",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "5420851",
+      "name": "熊",
+      "font_class": "xiong",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "6133985",
+      "name": "下 拉",
+      "font_class": "unfold",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "6471492",
+      "name": "裁剪",
+      "font_class": "caijian",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "6606176",
+      "name": "表格",
+      "font_class": "biaoge",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "7650374",
+      "name": "书籍2",
+      "font_class": "shuji2",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "7897681",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e6ea",
+      "unicode_decimal": 59114
+    },
+    {
+      "icon_id": "9614492",
+      "name": "导出",
+      "font_class": "daochu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "9923645",
+      "name": "文件",
+      "font_class": "wenjian",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "10253979",
+      "name": "折线上升",
+      "font_class": "zhexianshangsheng",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "10581256",
+      "name": "上传数据",
+      "font_class": "shangchuanshuju",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "12102911",
+      "name": "组织",
+      "font_class": "zuzhi",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "12410581",
+      "name": "等于",
+      "font_class": "dengyu",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "12519128",
+      "name": "无穷",
+      "font_class": "wuqiong",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "4355251",
+      "name": "书籍",
+      "font_class": "shuji1",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
       "icon_id": "14151854",
       "name": "全屏",
       "font_class": "quanping",
