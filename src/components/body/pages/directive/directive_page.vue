@@ -1,0 +1,1 @@
+<template><div>directive_page</div></template>

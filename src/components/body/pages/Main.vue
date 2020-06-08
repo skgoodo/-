@@ -277,6 +277,7 @@ export default {
 .main-top-num {
   display: flex;
   justify-content: space-between;
+  /* flex-wrap:wrap; */
 }
 
 .main-top-num > div {
@@ -309,6 +310,7 @@ export default {
   height: 110px;
   text-align: center;
   background-color: white;
+  border-bottom: 1px solid rgb(222, 224, 226);
 }
 .main-top-size1 {
   font-size: 50px;
@@ -325,7 +327,7 @@ export default {
 }
 .pie {
   float: left;
-  width: 390px;
+  width: 32%;
   margin: 10px 20px 10px 0;
   background-color: white;
 }
@@ -335,7 +337,7 @@ export default {
 }
 .bar {
   float: left;
-  width: 800px;
+  width: 65.5%;
   margin-top: 10px;
   background-color: white;
 }
@@ -344,7 +346,7 @@ export default {
   margin-left: 20px;
 }
 .line {
-  width: 1210px;
+  width: 99%;
   margin-top: 10px;
   background-color: white;
 }

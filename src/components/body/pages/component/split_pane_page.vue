@@ -1,0 +1,1 @@
+<template><div>split_pane_page</div></template>

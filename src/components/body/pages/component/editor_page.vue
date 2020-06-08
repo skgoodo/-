@@ -1,0 +1,1 @@
+<template><div>editor_page</div></template>

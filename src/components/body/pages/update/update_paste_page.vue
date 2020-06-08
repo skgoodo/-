@@ -1,0 +1,1 @@
+<template><div>update_paste_page</div></template>

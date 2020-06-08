@@ -1,0 +1,1 @@
+<template><div>i18n_page</div></template>

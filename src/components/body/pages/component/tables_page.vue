@@ -1,0 +1,1 @@
+<template><div>tables_page</div></template>

@@ -1,0 +1,1 @@
+<template><div>icons_page</div></template>

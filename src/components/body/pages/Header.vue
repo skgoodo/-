@@ -8,9 +8,8 @@
     </div>
     <div class="header-breadcrumb">
       <el-breadcrumb separator="/">
-        <el-breadcrumb-item :to="{ path: '/' }">
-          <i class="el-icon-s-home"></i>
-          <span>首页</span>
+        <el-breadcrumb-item :to="{ path: '/home' }">
+          <i class="el-icon-s-home">首页</i>
         </el-breadcrumb-item>
       </el-breadcrumb>
     </div>
