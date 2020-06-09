@@ -1,0 +1,1 @@
+<template><div>message_page</div></template>

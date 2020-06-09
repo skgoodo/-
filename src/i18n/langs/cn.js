@@ -1,6 +1,7 @@
 import zhLocale from "element-ui/lib/locale/lang/zh-CN";
 const cn = {
   message: {
+    home:"首页",
     document: "文档",
     group: "QQ群",
     components: "组件",

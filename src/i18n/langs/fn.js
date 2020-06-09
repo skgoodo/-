@@ -1,6 +1,7 @@
 import zhfnLocale from "element-ui/lib/locale/lang/zh-TW";
 const fn = {
   message: {
+    home:"首頁",
     document: "文檔",
     group: "QQ群",
     components: "组件",

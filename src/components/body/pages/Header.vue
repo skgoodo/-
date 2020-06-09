@@ -9,13 +9,16 @@
     <div class="header-breadcrumb">
       <el-breadcrumb separator="/">
         <el-breadcrumb-item :to="{ path: '/home' }">
-          <i class="el-icon-s-home">首页</i>
+          <i class="el-icon-house">{{$t('message.home')}}</i>
+        </el-breadcrumb-item>
+        <el-breadcrumb-item v-for="(item,index) in arr2" :key="index">
+          <i :class="item.icon">{{item.title}}</i>
         </el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="header-content">
       <i :class="[screen?'el-icon-umpsuoxiao':'el-icon-umpfangda']" @click="fullScreen"></i>
-      <i class="el-icon-umpV"></i>
+      <i class="el-icon-umpV" @click="goerror"></i>
       <el-dropdown trigger="click" class="language" @command="handleCommand">
         <span class="el-dropdown-link">
           {{languages}}
@@ -27,7 +30,7 @@
           <el-dropdown-item command="en">English</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <el-dropdown>
+      <el-dropdown @command="gomessage">
         <span class="el-dropdown-link">
           <span class="header-content-avatar">
             <img src="../../../assets/images/avatar.png" alt />
@@ -35,8 +38,8 @@
           <i class="el-icon-umpunfold el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>消息中心</el-dropdown-item>
-          <el-dropdown-item>退出登录</el-dropdown-item>
+          <el-dropdown-item command="xiaoxi">消息中心</el-dropdown-item>
+          <el-dropdown-item command="tuichu">退出登录</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -44,6 +47,7 @@
 </template>
 <script>
 import screenfull from "screenfull";
+import {mapState} from 'vuex';
 export default {
   data() {
     return {
@@ -88,7 +92,31 @@ export default {
         default:
           break;
       }
+    },
+    //跳转错误日志
+    goerror(){
+      this.$router.push("/error_logger/error_logger_page")
+    },
+    
+    gomessage(command){
+      switch(command){
+        //跳转信息中心
+        case "xiaoxi":{
+          this.$router.push("/message/message_page")
+          break
+        }
+        //退出登录
+        case "tuichu":{
+          this.$router.push("/login")
+          break
+        }
+
+      }
+      
     }
+  },
+  computed:{
+    ...mapState(['arr2'])
   }
 };
 </script>
@@ -125,7 +153,9 @@ export default {
   cursor: pointer;
   color: #409eff;
 }
-
+.el-icon-house{
+  font-size: 16px;
+}
 .header {
   height: 65px;
 }
