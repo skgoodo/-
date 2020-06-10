@@ -7,40 +7,75 @@
           <span class="breadcrumb-yuan"></span>
           <span>首页</span>
         </span>
-        <span class="breadcrumb-a"  v-for="(item,index) in arr3" :key="index">
+        <span class="breadcrumb-a" v-for="(item,index) in arr3" :key="index">
           <span class="breadcrumb-yuan"></span>
-          <span>{{item.title}}</span>
+          <span @click="toroute(item.path)">{{item.title}}</span>
+          <i class="el-icon-close" @click="closewindow(item.path)"></i>
         </span>
       </div>
     </div>
     <el-button icon="el-icon-arrow-right" class="btn-con-r" plain></el-button>
-    <el-dropdown>
+    <el-dropdown @command="closeall">
       <span class="el-dropdown-link">
         <i class="el-icon-umpcuowu"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item>关闭所有</el-dropdown-item>
-        <el-dropdown-item>关闭其他</el-dropdown-item>
+        <el-dropdown-item command="all">关闭所有</el-dropdown-item>
+        <el-dropdown-item command="other">关闭其他</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </div>
 </template>
 <script>
-  import {mapState} from "vuex"
-  export default{
-    data(){
-      return{
-        
+  import { mapState } from "vuex"
+  export default {
+    data() {
+      return {
+
       }
     },
-    methods:{
-      gohome(){
+    methods: {
+      //返回首页
+      gohome() {
         this.$router.push("/home")
+      },
+      //切换指定窗口
+      toroute(path) {
+        this.$router.push(path)
+      },
+      //关闭指定窗口
+      closewindow(path) {
+        var index=0
+        // console.log(this.arr3)
+        for(var i in this.arr3){
+          if(this.arr3[i].path==path){
+            index=i-1
+            break
+          }
+        }
+        if(index==-1){
+          this.$router.push("/home")
+        }else{
+          this.$router.push(this.arr3[index].path)
+        }
+        this.$store.commit("closewindow", path)
+      },
+      //关闭所有或其他窗口
+      closeall(command) {
+        switch(command){
+          case "all":{
+            this.$store.commit("closeall")
+            this.$router.push("/home")
+          }
+          case "other":{
+            this.$store.commit("closeother",this.$route.path)
+          }
+        }
       }
     },
-    computed:{
-        ...mapState(["arr3"])
-  }
+    computed: {
+      ...mapState(["arr3"])
+    }
   }
 </script>
 <style scoped>
@@ -100,7 +135,11 @@
     line-height: 30px;
     margin-right: 4px;
     cursor: pointer;
-    
+
+  }
+
+  .el-icon-close {
+    margin-left: 5px;
   }
 
   .breadcrumb-yuan {
@@ -111,6 +150,7 @@
     border-radius: 50%;
     margin-right: 10px;
   }
+
   .breadcrumb-buyuan {
     display: inline-block;
     width: 13px;
@@ -121,6 +161,8 @@
   }
 
   .breadcrumb-content {
+    overflow: hidden;
+    white-space: nowrap;
     position: absolute;
     left: 28px;
     right: 61px;

@@ -6,7 +6,7 @@
       <span></span>
     </div>
     <el-menu class="el-menu-vertical-demo" background-color="#00152A" active-text-color="#fff"
-      text-color="hsla(0,0%,100%,.7)" :collapse="$store.state.isCollapse" :router="true" unique-opened="true"
+      text-color="hsla(0,0%,100%,.7)" :collapse="$store.state.isCollapse" :router="true" :unique-opened="true"
       :default-active="$route.path">
       <el-menu-item>
         <i class="el-icon-umpshuji2"></i>
@@ -174,10 +174,7 @@
         var path = arr[1].path
         var title = arr[1].meta.title
         var obj = { path: path, title: title }
-        if (!this.arr3.includes(obj)) {
-          this.arr3.push(obj)
-        }
-        this.$store.commit("getpath", this.arr3)
+        this.$store.commit("getpath",obj)
       }
     }
   };

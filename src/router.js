@@ -1,7 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Index from "@/components/body/pages/Index.vue";
 Vue.use(Router);
+const routerPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return routerPush.call(this, location).catch(error=> error)
+}
 export default new Router({
   mode: "history",
   routes: [
