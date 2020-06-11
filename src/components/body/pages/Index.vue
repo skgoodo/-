@@ -47,6 +47,7 @@
     background-color: #e9eef3;
     color: #333;
     padding: 0 !important;
+    overflow-y: hidden;
   }
 
   body>.el-container {

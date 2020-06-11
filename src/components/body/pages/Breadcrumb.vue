@@ -5,11 +5,11 @@
       <div class="breadcrumb-center">
         <span class="breadcrumb-a" @click="gohome">
           <span class="breadcrumb-yuan"></span>
-          <span>首页</span>
+          <span style="font-size: 14px;">首页</span>
         </span>
         <span class="breadcrumb-a" v-for="(item,index) in arr3" :key="index">
           <span class="breadcrumb-yuan"></span>
-          <span @click="toroute(item.path)">{{item.title}}</span>
+          <span @click="toroute(item.path)" style="font-size: 14px;">{{item.title}}</span>
           <i class="el-icon-close" @click="closewindow(item.path)"></i>
         </span>
       </div>

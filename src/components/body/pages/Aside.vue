@@ -251,7 +251,6 @@
   .logo {
     height: 65px;
     text-align: center;
-    line-height: 65px;
   }
 
   .logo>img {
@@ -259,8 +258,8 @@
   }
 
   .logo .logo-img1 {
-    width: 157px;
-    height: 40px;
+    width: 162px;
+    height: 44px;
   }
 
   .logo .logo-img2 {

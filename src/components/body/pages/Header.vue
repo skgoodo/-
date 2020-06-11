@@ -12,7 +12,7 @@
           <i class="el-icon-house">{{$t('message.home')}}</i>
         </el-breadcrumb-item>
         <el-breadcrumb-item v-for="(item,index) in arr2" :key="index">
-          <i :class="item.icon">{{item.title}}</i>
+          <i :class="item.icon" style="font-size:16px;font-weight: 700;">{{item.title}}</i>
         </el-breadcrumb-item>
       </el-breadcrumb>
     </div>

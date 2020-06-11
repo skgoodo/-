@@ -14,7 +14,7 @@
                 <i class="el-icon-user"></i>
               </div>
               <div class="main-top-r">
-                <p class="main-top-size1">{{num}}</p>
+                <p class="main-top-size1">803</p>
                 <p class="main-top-size2">新增用户</p>
               </div>
             </div>
@@ -84,7 +84,6 @@
   export default {
     data() {
       return {
-        num: 803,
         option: {
           title: {
             text: "用户访问来源",
@@ -129,10 +128,11 @@
           },
           xAxis: {
             type: "category",
-            data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+            data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            splitLine:{show:true}
           },
           yAxis: {
-            type: "value"
+            type: "value",
           },
           series: [
             {
