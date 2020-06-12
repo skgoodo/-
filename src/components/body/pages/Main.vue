@@ -14,7 +14,7 @@
                 <i class="el-icon-user"></i>
               </div>
               <div class="main-top-r">
-                <p class="main-top-size1">803</p>
+                <p class="main-top-size1 text" ref="countup1">803</p>
                 <p class="main-top-size2">新增用户</p>
               </div>
             </div>
@@ -23,7 +23,7 @@
                 <i class="el-icon-user"></i>
               </div>
               <div class="main-top-r">
-                <p class="main-top-size1">803</p>
+                <p class="main-top-size1 text" ref="countup2">803</p>
                 <p class="main-top-size2">新增用户</p>
               </div>
             </div>
@@ -32,7 +32,7 @@
                 <i class="el-icon-user"></i>
               </div>
               <div class="main-top-r">
-                <p class="main-top-size1">803</p>
+                <p class="main-top-size1 text" ref="countup3">803</p>
                 <p class="main-top-size2">新增用户</p>
               </div>
             </div>
@@ -41,7 +41,7 @@
                 <i class="el-icon-user"></i>
               </div>
               <div class="main-top-r">
-                <p class="main-top-size1">803</p>
+                <p class="main-top-size1 text" ref="countup4">803</p>
                 <p class="main-top-size2">新增用户</p>
               </div>
             </div>
@@ -50,7 +50,7 @@
                 <i class="el-icon-user"></i>
               </div>
               <div class="main-top-r">
-                <p class="main-top-size1">803</p>
+                <p class="main-top-size1 text" ref="countup5">803</p>
                 <p class="main-top-size2">新增用户</p>
               </div>
             </div>
@@ -59,7 +59,7 @@
                 <i class="el-icon-user"></i>
               </div>
               <div class="main-top-r">
-                <p class="main-top-size1">803</p>
+                <p class="main-top-size1 text" ref="countup6">803</p>
                 <p class="main-top-size2">新增用户</p>
               </div>
             </div>
@@ -67,20 +67,21 @@
         </div>
         <div class="main-top-con">
           <div class="pie">
-            <div :style="{width: '347px', height: '300px'}" ref="onechart"></div>
+            <div :style="{height: '300px'}" ref="onechart"></div>
           </div>
           <div class="bar">
-            <div :style="{width: '747px', height: '300px'}" ref="twochart"></div>
+            <div :style="{height: '300px'}" ref="twochart"></div>
           </div>
         </div>
         <div class="line">
-          <div :style="{width: '1200px', height: '375px'}" ref="threechart"></div>
+          <div :style="{ height: '375px'}" ref="threechart"></div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+  import { CountUp } from 'countup.js'
   export default {
     data() {
       return {
@@ -129,7 +130,7 @@
           xAxis: {
             type: "category",
             data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-            splitLine:{show:true}
+            splitLine: { show: true }
           },
           yAxis: {
             type: "value",
@@ -239,10 +240,29 @@
               data: [820, 645, 546, 745, 872, 624, 258]
             }
           ]
-        }
+        },
+        options: {
+          startVal: 0
+        },
+        endCount: 803
       };
     },
     methods: {
+      initCountUp() {
+        let demo1 = new CountUp(this.$refs.countup1, this.endCount, this.options)
+        demo1.start()
+        let demo2 = new CountUp(this.$refs.countup2, this.endCount, this.options)
+        demo2.start()
+        let demo3 = new CountUp(this.$refs.countup3, this.endCount, this.options)
+        demo3.start()
+        let demo4 = new CountUp(this.$refs.countup4, this.endCount, this.options)
+        demo4.start()
+        let demo5 = new CountUp(this.$refs.countup5, this.endCount, this.options)
+        demo5.start()
+        let demo6 = new CountUp(this.$refs.countup6, this.endCount, this.options)
+        demo6.start()
+      },
+
       //饼图
       pie() {
         let oneChart = this.$echarts.init(this.$refs.onechart);
@@ -260,12 +280,13 @@
       },
     },
     created() {
-     
+
     },
     mounted() {
       this.pie();
       this.bar();
       this.line();
+      this.initCountUp()
     }
   };
 </script>
@@ -346,7 +367,7 @@
 
   .pie {
     float: left;
-    width: 32%;
+    width: 31.5%;
     margin: 10px 20px 10px 0;
     background-color: white;
   }

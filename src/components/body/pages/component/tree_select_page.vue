@@ -1,8 +1,8 @@
 <template>
     <div>
-        <el-select v-model="mineStatus" multiple  placeholder="请选择" @change="selectChange">
-            <el-option :value="mineStatusValue" style="height: auto">
-                <el-tree :data="data" show-checkbox node-key="id" :props="defaultProps" check-strictly
+        <el-select v-model="mineStatus" multiple  placeholder="请选择" >
+            <el-option :value="mineStatusValue" style="height: 100%">
+                <el-tree :data="data" show-checkbox node-key="data.id" :props="defaultProps" check-strictly
                     @check-change="handleCheckChange" ref="tree">
                 </el-tree>
             </el-option>
@@ -52,7 +52,7 @@
         },
         methods: {
             handleCheckChange() {
-                let res = this.$refs.tree.getCheckedNodes(true, true); 
+                let res = this.$refs.tree.getCheckedNodes(false, false); 
                 let arrLabel = [];
                 let arr = [];
                 res.forEach(item => {
@@ -62,19 +62,20 @@
                 this.mineStatusValue = arr;
                 this.mineStatus = arrLabel;
             },
-            selectChange(e) {
-                var arrNew = [];
-                var dataLength = this.mineStatusValue.length;
-                var eleng = e.length;
-                for (let i = 0; i < dataLength; i++) {
-                    for (let j = 0; j < eleng; j++) {
-                        if (e[j] === this.mineStatusValue[i].label) {
-                            arrNew.push(this.mineStatusValue[i])
-                        }
-                    }
-                }
-                this.$refs.tree.setCheckedNodes(arrNew);
-            },
+            // selectChange(e) {
+            //     var arrNew = [];
+            //     console.log(e)
+            //     var dataLength = this.mineStatusValue.length;
+            //     var eleng = e.length;
+            //     for (let i = 0; i < dataLength; i++) {
+            //         for (let j = 0; j < eleng; j++) {
+            //             if (e[j] === this.mineStatusValue[i].label) {
+            //                 arrNew.push(this.mineStatusValue[i])
+            //             }
+            //         }
+            //     }
+            //     this.$refs.tree.setCheckedNodes(arrNew);
+            // },
         }
     }
 </script>

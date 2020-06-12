@@ -61,7 +61,6 @@
                     if (valid) {
                         this.$router.push("/home")
                     } else {
-                        console.log(111)
                         return false
                     }
                 });

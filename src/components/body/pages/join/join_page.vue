@@ -9,8 +9,8 @@
                     <img src="https://file.iviewui.com/admin-dist/img/icon-qr-qq-wechat.5d82191e.png" alt=""
                         class="group">
                     <div>
-                        <p>QQ群号:</p>
-                        <p>621780943</p>
+                        <p>QQ群号: 621780943</p>
+
                     </div>
                 </div>
                 <div class="join-r">
