@@ -107,7 +107,9 @@ export default {
         }
         //退出登录
         case "tuichu":{
+          sessionStorage.clear()
           this.$router.push("/login")
+          window.location.reload()
           break
         }
 

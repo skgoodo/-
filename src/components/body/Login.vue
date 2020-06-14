@@ -60,6 +60,7 @@
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
                         this.$router.push("/home")
+                        this.$store.commit("getshouye",'/home/')
                     } else {
                         return false
                     }
